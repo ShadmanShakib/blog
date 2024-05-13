@@ -7,12 +7,10 @@ interface Project {
 
 const projectsData: Project[] = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    title: 'Shakib-Admin: Dashboard Using Next.js and Tailwind CSS',
+    description: `Beautiful Looking dashbaord build using Next.js 14 (app router) and Tailwind CSS.`,
+    imgSrc: '/static/images/shakib-admin.png',
+    href: 'https://shakib-admin.vercel.app/',
   },
   {
     title: 'The Time Machine',
