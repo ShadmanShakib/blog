@@ -1,46 +1,70 @@
-import { HoverEffect } from '@/components/ui/card-hover-effect'
+'use client'
+
+import { cn } from '@/utils/cn'
+import React from 'react'
+import { BentoGrid, BentoGridItem } from '../ui/bento-grid'
+import { BiSolidChevronRight, BiFile } from 'react-icons/bi'
 
 export default function Features() {
   return (
-    <div className="mx-auto max-w-5xl px-8">
-      <HoverEffect items={projects} />
-    </div>
+    <BentoGrid className="mx-auto w-full">
+      {items.map((item, i) => (
+        <BentoGridItem
+          key={i}
+          title={item.title}
+          description={item.description}
+          header={item.header}
+          icon={item.icon}
+          className={i === 3 || i === 6 ? 'md:col-span-2' : ''}
+        />
+      ))}
+    </BentoGrid>
   )
 }
-export const projects = [
+const Skeleton = () => (
+  <div className="flex h-full min-h-[6rem] w-full flex-1 rounded-xl bg-gradient-to-br from-neutral-200 to-neutral-100 dark:from-neutral-900 dark:to-neutral-800"></div>
+)
+const items = [
   {
-    title: 'Stripe',
-    description: 'A technology company that builds economic infrastructure for the internet.',
-    link: 'https://stripe.com',
+    title: 'The Dawn of Innovation',
+    description: 'Explore the birth of groundbreaking ideas and inventions.',
+    header: <Skeleton />,
+    icon: <BiSolidChevronRight className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: 'Netflix',
-    description:
-      'A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.',
-    link: 'https://netflix.com',
+    title: 'The Digital Revolution',
+    description: 'Dive into the transformative power of technology.',
+    header: <Skeleton />,
+    icon: <BiFile className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: 'Google',
-    description:
-      'A multinational technology company that specializes in Internet-related services and products.',
-    link: 'https://google.com',
+    title: 'The Art of Design',
+    description: 'Discover the beauty of thoughtful and functional design.',
+    header: <Skeleton />,
+    icon: <BiFile className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: 'Meta',
-    description:
-      "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-    link: 'https://meta.com',
+    title: 'The Power of Communication',
+    description: 'Understand the impact of effective communication in our lives.',
+    header: <Skeleton />,
+    icon: <BiFile className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: 'Amazon',
-    description:
-      'A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.',
-    link: 'https://amazon.com',
+    title: 'The Pursuit of Knowledge',
+    description: 'Join the quest for understanding and enlightenment.',
+    header: <Skeleton />,
+    icon: <BiFile className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: 'Microsoft',
-    description:
-      'A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.',
-    link: 'https://microsoft.com',
+    title: 'The Joy of Creation',
+    description: 'Experience the thrill of bringing ideas to life.',
+    header: <Skeleton />,
+    icon: <BiFile className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: 'The Spirit of Adventure',
+    description: 'Embark on exciting journeys and thrilling discoveries.',
+    header: <Skeleton />,
+    icon: <BiFile className="h-4 w-4 text-neutral-500" />,
   },
 ]
