@@ -2,6 +2,7 @@
 
 import { cn } from '@/utils/cn'
 import React, { useEffect, useState } from 'react'
+import Image from 'next/image'
 
 export const InfiniteMovingCards = ({
   items,
@@ -81,13 +82,19 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            className="relative w-[350px] max-w-full flex-shrink-0 rounded-2xl border border-b-0 border-slate-700 px-8 py-6 md:w-[450px]"
+            className="relative w-[500px] max-w-full flex-shrink-0 rounded-t-xl border border-b-0 border-slate-700 px-2 py-2 md:w-[450px]"
             style={{
               background: 'linear-gradient(180deg, var(--slate-800), var(--slate-900)',
             }}
             key={item.name}
           >
-            <blockquote>
+            <Image
+              src="/static/images/shakib-admin.png"
+              height={1200}
+              width={1200}
+              alt="shakib-admin"
+            />
+            {/* <blockquote>
               <div
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
@@ -105,7 +112,7 @@ export const InfiniteMovingCards = ({
                   </span>
                 </span>
               </div>
-            </blockquote>
+            </blockquote> */}
           </li>
         ))}
       </ul>

@@ -5,7 +5,7 @@ import { InfiniteMovingCards } from '../ui/infinite-moving-cards'
 
 export default function Showcase() {
   return (
-    <div className="dark:bg-grid-white/[0.05] relative flex h-[40rem] flex-col items-center justify-center overflow-hidden rounded-md  antialiased ">
+    <div className="dark:bg-grid-white/[0.05] relative flex flex-col items-center justify-center overflow-hidden rounded-md py-5  antialiased ">
       <InfiniteMovingCards items={testimonials} direction="left" speed="slow" />
     </div>
   )

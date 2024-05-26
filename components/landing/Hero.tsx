@@ -12,7 +12,7 @@ const Hero = () => {
           </h1>
         </div>
         <div className="mt-8">
-          <p className="text-center font-medium text-gray-700 dark:text-gray-400">
+          <p className="max-w-3xl text-center font-medium text-gray-700 dark:text-gray-400">
             The NextJS Full Stack Devloper with all tools you need to build your SaaS, AI tool, or
             any other web app and make $ online fast.
           </p>
@@ -23,7 +23,7 @@ const Hero = () => {
       </div>
       <div className="mt-2 flex justify-center gap-1 text-gray-600 dark:text-gray-300">
         <IoGiftOutline className="h-5 w-5 animate-bounce text-green-400" />
-        <span className="text-green-400">$300 off</span> the first 10 customers (4 left)
+        <span className="text-green-400">$300 discount</span> the first 5 customers (4 left)
       </div>
     </section>
   )
