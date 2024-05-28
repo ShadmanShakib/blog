@@ -8,7 +8,9 @@ const Hero = () => {
         <div className="flex justify-center font-medium xl:w-3/5 ">
           <h1 className="w-80 text-center text-3xl leading-relaxed dark:text-gray-100  xl:w-full xl:text-left xl:text-5xl xl:leading-snug ">
             Turn idea into MVP in weeks,{' '}
-            <span className="rounded-md bg-gray-500 px-2 py-1">Not months</span>
+            <span className="rounded-md bg-primary-500 px-2 py-1 text-white dark:bg-gray-800 dark:text-[#3fb950] ">
+              Not months
+            </span>
           </h1>
         </div>
         <div className="mt-8">

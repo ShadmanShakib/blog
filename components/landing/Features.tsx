@@ -4,6 +4,7 @@ import { cn } from '@/utils/cn'
 import React from 'react'
 import { BentoGrid, BentoGridItem } from '../ui/bento-grid'
 import { BiSolidChevronRight, BiFile } from 'react-icons/bi'
+import AuthHeader from './AuthHeader'
 
 export default function Features() {
   return (
@@ -26,44 +27,44 @@ const Skeleton = () => (
 )
 const items = [
   {
-    title: 'The Dawn of Innovation',
-    description: 'Explore the birth of groundbreaking ideas and inventions.',
-    header: <Skeleton />,
+    title: 'Autentication ',
+    description: 'Role based authentication for users using NextAuth.js / Auth.js /Clerk. ',
+    header: <AuthHeader />,
     icon: <BiSolidChevronRight className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: 'The Digital Revolution',
-    description: 'Dive into the transformative power of technology.',
+    title: 'Payment Integration',
+    description: 'Payment integration with Stripe webhooks and checkout.',
     header: <Skeleton />,
     icon: <BiFile className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: 'The Art of Design',
-    description: 'Discover the beauty of thoughtful and functional design.',
+    title: 'Admin Dashboard',
+    description: 'Multi page admin dashboard with charts.js, tables, user profile etc',
     header: <Skeleton />,
     icon: <BiFile className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: 'The Power of Communication',
+    title: 'Send Emails',
     description: 'Understand the impact of effective communication in our lives.',
     header: <Skeleton />,
     icon: <BiFile className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: 'The Pursuit of Knowledge',
+    title: 'Mdx blog',
     description: 'Join the quest for understanding and enlightenment.',
     header: <Skeleton />,
     icon: <BiFile className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: 'The Joy of Creation',
-    description: 'Experience the thrill of bringing ideas to life.',
+    title: 'Drag and drop',
+    description: 'Task management with drag and drop option',
     header: <Skeleton />,
     icon: <BiFile className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: 'The Spirit of Adventure',
-    description: 'Embark on exciting journeys and thrilling discoveries.',
+    title: 'Testing',
+    description: 'End to End testing with Playwright ',
     header: <Skeleton />,
     icon: <BiFile className="h-4 w-4 text-neutral-500" />,
   },

@@ -12,9 +12,9 @@ export const InfiniteMovingCards = ({
   className,
 }: {
   items: {
-    quote: string
-    name: string
-    title: string
+    src: string
+    name?: string
+    title?: string
   }[]
   direction?: 'left' | 'right'
   speed?: 'fast' | 'normal' | 'slow'
@@ -60,7 +60,7 @@ export const InfiniteMovingCards = ({
       } else if (speed === 'normal') {
         containerRef.current.style.setProperty('--animation-duration', '40s')
       } else {
-        containerRef.current.style.setProperty('--animation-duration', '80s')
+        containerRef.current.style.setProperty('--animation-duration', '60s')
       }
     }
   }
@@ -82,37 +82,13 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            className="relative w-[500px] max-w-full flex-shrink-0 rounded-t-xl border border-b-0 border-slate-700 px-2 py-2 md:w-[450px]"
+            className="relative w-[600px] max-w-full flex-shrink-0 rounded-t-xl border border-b-0 border-slate-700 px-2 py-2 md:w-[450px]"
             style={{
               background: 'linear-gradient(180deg, var(--slate-800), var(--slate-900)',
             }}
             key={item.name}
           >
-            <Image
-              src="/static/images/shakib-admin.png"
-              height={1200}
-              width={1200}
-              alt="shakib-admin"
-            />
-            {/* <blockquote>
-              <div
-                aria-hidden="true"
-                className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
-              ></div>
-              <span className=" relative z-20 text-sm font-normal leading-[1.6] text-gray-100">
-                {item.quote}
-              </span>
-              <div className="relative z-20 mt-6 flex flex-row items-center">
-                <span className="flex flex-col gap-1">
-                  <span className=" text-sm font-normal leading-[1.6] text-gray-400">
-                    {item.name}
-                  </span>
-                  <span className=" text-sm font-normal leading-[1.6] text-gray-400">
-                    {item.title}
-                  </span>
-                </span>
-              </div>
-            </blockquote> */}
+            <Image src={item.src} height={1200} width={1200} alt="shakib-admin" />
           </li>
         ))}
       </ul>
