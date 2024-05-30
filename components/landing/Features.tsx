@@ -1,10 +1,11 @@
 'use client'
-
-import { cn } from '@/utils/cn'
 import React from 'react'
-import { BentoGrid, BentoGridItem } from '../ui/bento-grid'
 import { BiSolidChevronRight, BiFile } from 'react-icons/bi'
+import PaymentHeader from './PaymentHeader'
+import { BentoGrid, BentoGridItem } from '../ui/bento-grid'
 import AuthHeader from './AuthHeader'
+import AdminHeader from './AdminHeader'
+import AIHeader from './AIHeader'
 
 export default function Features() {
   return (
@@ -35,36 +36,36 @@ const items = [
   {
     title: 'Payment Integration',
     description: 'Payment integration with Stripe webhooks and checkout.',
-    header: <Skeleton />,
+    header: <PaymentHeader />,
     icon: <BiFile className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: 'Admin Dashboard',
     description: 'Multi page admin dashboard with charts.js, tables, user profile etc',
-    header: <Skeleton />,
+    header: <AdminHeader />,
+    icon: <BiFile className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: 'AI App Development',
+    description: 'Integration with ChatGPT-3.5, 4, 4o, Gemini 1.5 and many more',
+    header: <AIHeader />,
     icon: <BiFile className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: 'Send Emails',
-    description: 'Understand the impact of effective communication in our lives.',
-    header: <Skeleton />,
-    icon: <BiFile className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: 'Mdx blog',
-    description: 'Join the quest for understanding and enlightenment.',
-    header: <Skeleton />,
-    icon: <BiFile className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: 'Drag and drop',
-    description: 'Task management with drag and drop option',
+    description: 'Send mail with MailGun',
     header: <Skeleton />,
     icon: <BiFile className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: 'Testing',
     description: 'End to End testing with Playwright ',
+    header: <Skeleton />,
+    icon: <BiFile className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: 'SEO & Mdx blog',
+    description: 'Join the quest for understanding and enlightenment.',
     header: <Skeleton />,
     icon: <BiFile className="h-4 w-4 text-neutral-500" />,
   },
