@@ -2,14 +2,15 @@
 import { cn } from '@/utils/cn'
 import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link'
-import { useState } from 'react'
+import React, { useState } from 'react'
+import Image from 'next/image'
 
 export const HoverEffect = ({
   items,
   className,
 }: {
   items: {
-    title: string
+    title?: React.ReactNode
     description: string
     link: string
   }[]
@@ -46,6 +47,7 @@ export const HoverEffect = ({
           </AnimatePresence>
           <Card>
             <CardTitle>{item.title}</CardTitle>
+
             <CardDescription>{item.description}</CardDescription>
           </Card>
         </Link>
@@ -81,7 +83,9 @@ export const CardTitle = ({
   className?: string
   children: React.ReactNode
 }) => {
-  return <h4 className={cn('mt-4 font-bold tracking-wide text-zinc-100', className)}>{children}</h4>
+  return (
+    <div className={cn('mt-4 font-bold tracking-wide text-zinc-100', className)}>{children}</div>
+  )
 }
 export const CardDescription = ({
   className,
