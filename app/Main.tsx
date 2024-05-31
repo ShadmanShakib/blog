@@ -4,6 +4,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
 import { Features, Hero, Techs, Showcase } from '@/components/landing'
+import { CTA } from '@/components/ui'
 
 const MAX_DISPLAY = 5
 
@@ -86,11 +87,23 @@ export default function Home({ posts }) {
           </Link>
         </div>
       )}
-      {siteMetadata.newsletter?.provider && (
+      <div className="flex w-full flex-col items-center gap-5 py-20">
+        <div className="text-cetner">
+          <h1 className="mb-2 text-center text-3xl">We turn your ideas into Reality </h1>
+          <p className="text-center text-gray-400">
+            Inovative solution for you vision. We focus on understanding you need and build
+            accordding to your requirement.
+          </p>
+        </div>
+        <div className="">
+          <CTA title="Schedule a meeting" />
+        </div>
+      </div>
+      {/* {siteMetadata.newsletter?.provider && (
         <div className="flex items-center justify-center pt-4">
           <NewsletterForm />
         </div>
-      )}
+      )} */}
     </>
   )
 }
