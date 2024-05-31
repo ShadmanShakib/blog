@@ -1,11 +1,14 @@
 'use client'
 import React from 'react'
-import { BiSolidChevronRight, BiFile } from 'react-icons/bi'
+import { BiSolidChevronRight, BiFile, BiMailSend } from 'react-icons/bi'
 import PaymentHeader from './PaymentHeader'
 import { BentoGrid, BentoGridItem } from '../ui/bento-grid'
 import AuthHeader from './AuthHeader'
 import AdminHeader from './AdminHeader'
 import AIHeader from './AIHeader'
+import SendmailHeader from './SendmailHeader'
+import TestingHeader from './TestingHeader'
+import SEOHeader from './SEOHeader'
 
 export default function Features() {
   return (
@@ -54,19 +57,19 @@ const items = [
   {
     title: 'Send Emails',
     description: 'Send mail with MailGun',
-    header: <Skeleton />,
-    icon: <BiFile className="h-4 w-4 text-neutral-500" />,
+    header: <SendmailHeader />,
+    icon: <BiMailSend className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: 'Testing',
-    description: 'End to End testing with Playwright ',
-    header: <Skeleton />,
+    description: 'End to End testing with Playwright for all the modern web apps.  ',
+    header: <TestingHeader />,
     icon: <BiFile className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: 'SEO & Mdx blog',
     description: 'Join the quest for understanding and enlightenment.',
-    header: <Skeleton />,
+    header: <SEOHeader />,
     icon: <BiFile className="h-4 w-4 text-neutral-500" />,
   },
 ]

@@ -1,4 +1,7 @@
 import { HoverEffect } from '@/components/ui/card-hover-effect'
+import Image from 'next/image'
+
+import { MongoDB, Nodejs, ReactIcon } from '../icons'
 
 export default function Techs() {
   return (
@@ -9,39 +12,42 @@ export default function Techs() {
 }
 export const projects = [
   {
-    title: 'NEXT.js 14',
+    title: (
+      <div className="">
+        <Image src="/static/images/nextjs.png" alt="nextjs" width={100} height={190} />
+      </div>
+    ),
     description:
-      'Latest Next.js version with app router and server actions. Full stack development with the power of Next.js API routes.',
-    link: 'https://stripe.com',
+      'Next.js is a powerful React framework that enables server-side rendering and static site generation. ',
+    link: 'https://nextjs.org',
   },
   {
-    title: 'React.js',
+    title: <ReactIcon />,
     description:
-      'A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.',
-    link: 'https://netflix.com',
+      'Built with latest features of React.js(most popular JS library) including server components and server actions. ',
+    link: 'https://reactjs.org',
   },
   {
-    title: 'Tailwind CSS',
+    title: <Image src="/static/images/tailwindcss.png" alt="tailwindcss" height={50} width={50} />,
     description:
       'A multinational technology company that specializes in Internet-related services and products.',
-    link: 'https://google.com',
+    link: 'https://tailwindcss.com',
   },
   {
-    title: 'Postgres',
+    title: <Image src="/static/images/PostgresSQL.png" alt="postgres" height={50} width={50} />,
     description:
-      "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-    link: 'https://meta.com',
+      'PostgreSQL supports complex queries, advanced data types, and full ACID compliance, making it a great choice for transactional applications.',
+    link: 'https://postgressql.org',
   },
   {
-    title: 'SEO',
-    description:
-      'A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.',
-    link: 'https://amazon.com',
+    title: <MongoDB />,
+    description: 'MongoDB is a NoSQL database known for its flexibility and scalability.',
+    link: 'https://mongodb.com',
   },
   {
-    title: 'Testing',
+    title: <Nodejs />,
     description:
-      'A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.',
-    link: 'https://microsoft.com',
+      'Node.js is a JavaScript runtime built on Chromes V8 JavaScript engine. It allows developers to build scalable network applications using JavaScript on the server-side.',
+    link: 'https://nodejs.org',
   },
 ]
